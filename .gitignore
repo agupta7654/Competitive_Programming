@@ -1,0 +1,14 @@
+*.save
+*.txt
+*.json
+*.log
+*.out
+*.o
+*.exe
+*.class
+*.py
+*.env
+.vscode/
+.cph/
+env/
+.tool-versions
