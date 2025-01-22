@@ -17,6 +17,14 @@ using pll = pair<ll, ll>;
 using vb = vector<bool>;
 
 void solve(){
+    int n;
+    vll v(n+1);
+    for(int i = 1; i < n; i++){
+        int x;
+        cin >> x;
+        v[i] = v[i-1] + x;
+    }
+    
     
 }
 

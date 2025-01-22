@@ -17,7 +17,20 @@ using pll = pair<ll, ll>;
 using vb = vector<bool>;
 
 void solve(){
-    
+    int a1, a2, a4, a5;
+    cin >> a1 >> a2 >> a4 >> a5;
+    int t1 = a1+a2;
+    int t2 = a5-a4;
+    int t3 = a4-a2;
+    if(t1 == t2 && t2 == t3){
+        cout << 3 << endl;
+    }
+    else if(t1 == t2 || t2 == t3 || t1 == t3){
+        cout << 2 << endl;
+    }
+    else{
+        cout << 1 << endl;
+    }
 }
 
 int main()

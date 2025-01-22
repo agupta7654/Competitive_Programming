@@ -17,6 +17,33 @@ using pll = pair<ll, ll>;
 using vb = vector<bool>;
 
 void solve(){
+    int n;
+    cin >> n;
+    vll v(n);
+    ll zero = 0;
+    ll one = 0;
+    for(int i = 0; i < n; i++){
+        int in =  0;
+        cin >> in;
+        in = in % 2;
+        if(in % 2 == 0){
+            zero++;
+        }
+        else{
+            one++;
+        }
+        v[i] = in;
+    }
+    if(zero > 0){
+        cout << 1+one << endl;
+    }
+    else{
+        cout << one-1 << endl;
+    }
+    
+
+    
+    
     
 }
 

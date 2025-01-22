@@ -17,6 +17,20 @@ using pll = pair<ll, ll>;
 using vb = vector<bool>;
 
 void solve(){
+    int n;
+    cin >> n;
+    vll v(n);
+    ll count = 0;
+    for(int i = 0; i < n; i++){
+        cin >> v[i];
+    }
+    int curNum = v[0];
+    for(int i = 1; i < )
+    
+    
+
+    
+    
     
 }
 
