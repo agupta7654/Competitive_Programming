@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.*;
+
+public class DaisyChains {
+	public static void main(String[] args) throws IOException {
+		Kattio io = new Kattio();
+		
+		int N = io.nextInt();
+		int[] fl = new int[N];
+		for(int i = 0; i < N; i++) {
+			fl[i] = io.nextInt();
+		}
+		int cnt = N;
+		for(int i = 0; i < N; i++) {
+			for(int j = 0; j < N; j++) {
+				if( i != j) {
+					double sum = 0;
+					for(int k = i; k <= j; k++) {
+						sum += fl[k];
+					}
+					sum /= (j-i+1);
+					for(int k = i; k <= j; k++) {
+						if(fl[k] == sum) {
+//							io.println(i + " " + j + " "+ sum);
+							cnt++;
+							
+							break;
+						}
+					}
+				}
+			}			
+		}
+		
+		io.println(cnt);
+		
+		
+		io.close();
+	}
+}
+
+
+class Kattio extends PrintWriter {
+    private BufferedReader r;
+    private StringTokenizer st;
+    // standard input
+    public Kattio() { this(System.in, System.out); }
+    public Kattio(InputStream i, OutputStream o) {
+        super(o);
+        r = new BufferedReader(new InputStreamReader(i));
+    }
+    // USACO-style file input
+    public Kattio(String problemName) throws IOException {
+        super(problemName + ".out");
+        r = new BufferedReader(new FileReader(problemName + ".in"));
+    }
+    // returns null if no more input
+    public String next() {
+        try {
+            while (st == null || !st.hasMoreTokens())
+                st = new StringTokenizer(r.readLine());
+            return st.nextToken();
+        } catch (Exception e) { }
+        return null;
+    }
+    public int nextInt() { return Integer.parseInt(next()); }
+    public double nextDouble() { return Double.parseDouble(next()); }
+    public long nextLong() { return Long.parseLong(next()); }
+}
