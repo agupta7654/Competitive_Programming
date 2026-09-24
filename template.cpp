@@ -17,6 +17,7 @@ using vb = vector<bool>;
 
 void solve()
 {
+    
 }
 
 int main()
